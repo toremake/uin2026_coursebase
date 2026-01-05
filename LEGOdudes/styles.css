@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --red: #da291c;
+    --yellow: #ffd700;
+    --blue: #006db7;
+    --green: #00af4d;
+    --white: #fff;
+    --black: #000;
+
+    --rootsize: 20px;
+    --maxwidth: 1200px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--yellow);
+    background-image: url(website_images/mainbackground.png);
+}
+
+p {
+    font-size: 1rem;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    max-width: 250px;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* HOVEDOMRÅDE */
+#container {
+    width: 100%;
+    max-width: var(--maxwidth);
+    background-color: var(--white);
+    margin: 0 auto;
+}
+
+header {
+    padding: 1rem;
+}

@@ -4,7 +4,7 @@ import Todo from "./Todo";
   Todos-komponenten har ansvar for å håndtere
   og vise en samling med todo-oppgaver.
 */
-export default function Todos(){
+export default function Todos({todoItems}){
 
     /*
       Dette er en liste med todo-objekter.
@@ -15,26 +15,8 @@ export default function Todos(){
       
       Vi bruker en array for å enkelt kunne jobbe med flere todos.
     */
-    const todoItems = [
-        {
-            id: 0,
-            title: "Gå på butikken",
-            content: "Handle spagetthi og dorull"
-        },
-        {
-            id: 1,
-            title: "Skrive emnerapport",
-            content: "Gå igjennom statestikk og skrive rapport basert på tall og tilbakemeldinger"
-        },
-        {
-            id: 2,
-            title: "Kjøpe kattemat",
-            content: "Kjøpe nytt slankefor..."
-        }
-    ]
-
     return (
-        <section>
+        <section className="flex-r">
             <h2>Todos</h2>
             {/*
               Her renderer vi Todo-komponenten.
@@ -45,7 +27,7 @@ export default function Todos(){
               med map() for å sende data til Todo-komponenten
               via props og vise alle oppgavene dynamisk.
             */}
-            <Todo />
+            {todoItems.map((item) => <Todo key={item.id} title={item.title} content={item.content} />)}
         </section>
     )
 }

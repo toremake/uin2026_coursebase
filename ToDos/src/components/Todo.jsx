@@ -1,8 +1,8 @@
-export default function Todo(){
+export default function Todo({title, content}){
     return (
         <article className="todo-card">
-            <h3>Todo</h3>
-            <p>Hva skal jeg gjøre? Hva er planen min?</p>
+            <h3>{title}</h3>
+            <p>{content}</p>
             <button>Done</button>
         </article>
     )

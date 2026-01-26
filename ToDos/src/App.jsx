@@ -1,8 +1,31 @@
 import './App.css'
 import './style/todocard.scss'
+import './style/layout.scss'
 import Todos from './components/Todos'
+import AddToDo from './components/AddToDo'
+import { useState } from 'react'
 
 function App() {
+  const [todoList, setTodoList] = useState()
+  const [todo, setTodo] = useState()
+
+      const todoItems = [
+        {
+            id: 0,
+            title: "Gå på butikken",
+            content: "Handle spagetthi og dorull"
+        },
+        {
+            id: 1,
+            title: "Skrive emnerapport",
+            content: "Gå igjennom statestikk og skrive rapport basert på tall og tilbakemeldinger"
+        },
+        {
+            id: 2,
+            title: "Kjøpe kattemat",
+            content: "Kjøpe nytt slankefor..."
+        }
+    ]
   
   return (
     <main>
@@ -13,7 +36,8 @@ function App() {
         alle enkeltstående todo-elementer, slik at App-komponentet
         holder seg enkel og oversiktlig.
       */}
-      <Todos />
+      <AddToDo todo={todo} setTodo={setTodo} />
+      <Todos todoItems={todoItems} />
     </main>
   )
 }

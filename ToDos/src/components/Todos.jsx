@@ -4,7 +4,7 @@ import Todo from "./Todo";
   Todos-komponenten har ansvar for å håndtere
   og vise en samling med todo-oppgaver.
 */
-export default function Todos({todoItems}){
+export default function Todos({todoItems, setTodoList}){
 
     /*
       Dette er en liste med todo-objekter.
@@ -27,7 +27,7 @@ export default function Todos({todoItems}){
               med map() for å sende data til Todo-komponenten
               via props og vise alle oppgavene dynamisk.
             */}
-            {todoItems.map((item) => <Todo key={item.id} title={item.title} content={item.content} />)}
+            {todoItems.map((item) => <Todo key={item.id} title={item.title} content={item.content} id={item.id} setTodoList={setTodoList} />)}
         </section>
     )
 }

@@ -27,10 +27,14 @@ function App() {
   const [todo, setTodo] = useState()
 
 
+
+
+
   
   return (
     <main>
       <h1>Todo app</h1>
+      
         {/* 
         Her bruker vi Todos-komponentet.
         Dette komponentet har ansvar for å hente inn og vise
@@ -38,7 +42,7 @@ function App() {
         holder seg enkel og oversiktlig.
       */}
       <AddToDo todo={todo} setTodo={setTodo} setTodoList={setTodoList} />
-      <Todos todoItems={todoList} />
+      <Todos todoItems={todoList} setTodoList={setTodoList} />
     </main>
   )
 }

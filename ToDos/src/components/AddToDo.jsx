@@ -22,7 +22,7 @@ export default function AddToDo({ todo, setTodo, setTodoList}) {
 
     const handleClick = (e)=>{
         e.preventDefault()
-        const uniqId = Math.floor(Math.random() * (999 - 0 + 1) + 1)
+        const uniqId = crypto.randomUUID()
         setTodoList((prev) => ([...prev, {id:uniqId,...todo}]))
         console.log(todo)
     }

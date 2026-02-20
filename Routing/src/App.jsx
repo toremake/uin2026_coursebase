@@ -20,8 +20,9 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='categories' element={<CategoryLayout />}>
-          <Route index element={<Categories />} />
-          <Route path=':slug' element={<Category />} />
+          <Route index element={<h1>Kategorier</h1>} />
+          <Route path=':slug' element={<Categories />} />
+          <Route path=':slug/:cat' element={<Category />} />
         </Route>
         <Route path='about' element={<About />} />
       </Routes>

@@ -31,7 +31,7 @@ export default function CategoryLayout(){
      <>
         {/* Navigasjonsmeny for kategoriene */}
         <nav className='main-nav'>
-            {Object.keys(apiData)?.map((item) => <Link key={item+'-saj'} to={item} onClick={()=>setApiEndpoint(defaultApiUrl + item)}>{item}</Link>)}
+            {Object.keys(apiData)?.map((item) => <Link key={item+'-saj'} to={item} onClick={()=>setApiEndpoint(defaultApiUrl + item )}>{item}</Link>)}
             {/*apiData?.map((item) => <Link key={item.name+'-xt'} to={item.name} onClick={()=> setApiEndpoint(item.url)}>{item.name}</Link>)*/}
         </nav>
 
@@ -44,7 +44,7 @@ export default function CategoryLayout(){
           
           Det bestemmes av routene definert i App.jsx
         */}
-        <Outlet context={{apiEndpoint, defaultApiUrl}} />
+        <Outlet context={{apiEndpoint, defaultApiUrl, setApiEndpoint}} />
     </>
     )
 }

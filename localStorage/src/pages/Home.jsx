@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
+import History from "../components/History"
 
 export default function Home(){
     const [search, setSearch] = useState()
     const storedHistory = localStorage.getItem("search")
+    const [focused, setFocused] = useState(false) 
     
     const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : [])
 
@@ -13,6 +15,7 @@ export default function Home(){
     const apiKey = import.meta.env.VITE_APP_API_KEY
 
     useEffect(()=>{
+        
         localStorage.setItem("search", JSON.stringify(history))
     },[history])
 
@@ -51,10 +54,12 @@ export default function Home(){
         <form onSubmit={handleSubmit}>
             <label>
                 Søk etter film
-                <input type="search" placeholder="Harry Potter" onChange={handleChange}></input>
+                <input type="search" placeholder="Harry Potter" onChange={handleChange} onFocus={()=> setFocused(true)} /*onBlur={()=> setFocused(false)}*/></input>
             </label>
+            {focused ? <History history={history} setSearch={setSearch} /> : null }
             <button onClick={getMovies}>Søk</button>
-        </form>  
+        </form>
+
     </main>
         
     )

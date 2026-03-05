@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Movie from './pages/Movie'
 
 function App() {
-
+const [history, setHistory] = useState(storedHistory ? JSON.parse(storedHistory) : [])
   return (
     <Routes>
       <Route index element={<Home />} />

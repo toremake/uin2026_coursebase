@@ -1,0 +1,123 @@
+
+// Opacity variable
+$type-bg-opacity: 0.5;
+
+.type-card{
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+    flex-direction: row-reverse;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 153px;
+    width: 100%;
+    font-weight: 600;
+    box-sizing: border-box;
+
+    a{
+        width: 100%;
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    p{
+        text-transform: capitalize;
+    }
+
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.type-normal {
+  background-color: rgba(168, 167, 122, $type-bg-opacity);
+  color: #111;
+}
+
+.type-fire {
+  background-color: rgba(238, 129, 48, $type-bg-opacity);
+  color: #111;
+}
+
+.type-water {
+  background-color: rgba(99, 144, 240, $type-bg-opacity);
+  color: #111;
+}
+
+.type-electric {
+  background-color: rgba(247, 208, 44, $type-bg-opacity);
+  color: #111;
+}
+
+.type-grass {
+  background-color: rgba(122, 199, 76, $type-bg-opacity);
+  color: #111;
+}
+
+.type-ice {
+  background-color: rgba(150, 217, 214, $type-bg-opacity);
+  color: #111;
+}
+
+.type-fighting {
+  background-color: rgba(194, 46, 40, $type-bg-opacity);
+  color: #111;
+}
+
+.type-poison {
+  background-color: rgba(163, 62, 161, $type-bg-opacity);
+  color: #111;
+}
+
+.type-ground {
+  background-color: rgba(226, 191, 101, $type-bg-opacity);
+  color: #111;
+}
+
+.type-flying {
+  background-color: rgba(169, 143, 243, $type-bg-opacity);
+  color: #111;
+}
+
+.type-psychic {
+  background-color: rgba(249, 85, 135, $type-bg-opacity);
+  color: #111;
+}
+
+.type-bug {
+  background-color: rgba(166, 185, 26, $type-bg-opacity);
+  color: #111;
+}
+
+.type-rock {
+  background-color: rgba(182, 161, 54, $type-bg-opacity);
+  color: #111;
+}
+
+.type-ghost {
+  background-color: rgba(115, 87, 151, $type-bg-opacity);
+  color: #111;
+}
+
+.type-dragon {
+  background-color: rgba(111, 53, 252, $type-bg-opacity);
+  color: #111;
+}
+
+.type-dark {
+  background-color: rgba(112, 87, 70, $type-bg-opacity);
+  color: #111;
+}
+
+.type-steel {
+  background-color: rgba(183, 183, 206, $type-bg-opacity);
+  color: #111;
+}
+
+.type-fairy {
+  background-color: rgba(214, 133, 173, $type-bg-opacity);
+  color: #111;
+}

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --red: #da291c;
+    --yellow: #ffd700;
+    --blue: #006db7;
+    --green: #00af4d;
+    --white: #fff;
+    --black: #000;
+
+    --rootsize: 20px;
+    --maxwidth: 1200px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--yellow);
+    background-image: url(website_images/mainbackground.png);
+}
+
+p {
+    font-size: 1rem;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    max-width: 250px;
+    width: 100%;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* HOVEDOMRÅDE */
+#container {
+    width: 100%;
+    max-width: var(--maxwidth);
+    background-color: var(--white);
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-button {
+    width: 70px;
+    background: transparent;
+    border: none;
+    position: relative;
+
+    div {
+        background: var(--red);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -15px;
+        left: -12px;
+    }
+}
+
+nav {
+    background: var(--red);
+    color: var(--white);
+
+    a {
+        display: inline-block;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: var(--white);
+        text-decoration: none;
+        
+
+        &:hover {
+            background: var(--yellow);
+            color: var(--black);
+            box-shadow: inset 0 -5px 0 var(--black);
+        }
+    }
+}
+
+main {
+    #product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .product-card {
+        max-width: calc(33% - 2rem);
+        background: var(--black);
+        color: var(--white);
+        padding: 1rem;
+        box-sizing: border-box;
+        border-bottom: 1rem solid var(--green);
+        margin-bottom: 1rem;
+
+        a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        h3 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+        
+        p {
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: var(--green);
+            color: var(--white);
+            font-family: "Rubik", sans-serif;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* HANDLEVOGN */
+#cart {
+    width: 550px;
+    background: var(--black);
+    color: var(--white);
+    border-left: 0.5rem solid var(--green);
+    border-bottom: 0.5rem solid var(--green);
+    padding: 1rem;
+    position: absolute;
+    top: 74px;
+    right: 0;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    table {
+        width: 100%;
+        color: var(--white);
+    }
+}

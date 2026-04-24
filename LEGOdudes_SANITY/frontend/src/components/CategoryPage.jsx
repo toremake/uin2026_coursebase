@@ -10,7 +10,7 @@ export default function CategoryPage() {
     useEffect(() => {
         async function fetchCategory(slug) {
             const tempCategory = await client.fetch(`*[_type == 'category' && slug.current == $slug]{
-                _id, categoryname, "catProds": *[_type == 'product' && references(^._id)]
+                _id, categoryname, "catProds": *[_type == 'product' && references(^._id)]{..., "imageURL": productimage.asset->url}
             }`, {slug})
             setCategory(tempCategory[0])
         }
